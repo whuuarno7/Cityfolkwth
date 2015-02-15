@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bites: 1
+  claps: 1
+  tags: 1
+  experiences: 1
+  camaradas: 1
+  shares: 1
+
+two:
+  bites: 1
+  claps: 1
+  tags: 1
+  experiences: 1
+  camaradas: 1
+  shares: 1

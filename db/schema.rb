@@ -11,7 +11,84 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150214200414) do
+ActiveRecord::Schema.define(version: 20150214212204) do
+
+  create_table "agendas", force: :cascade do |t|
+    t.integer  "hourend"
+    t.integer  "hourstart"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.integer  "datestart"
+    t.integer  "dateend"
+    t.integer  "hourstart"
+    t.integer  "hourend"
+    t.integer  "price"
+    t.string   "wherebuy"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "phrases", force: :cascade do |t|
+    t.string   "phrase"
+    t.string   "autor"
+    t.integer  "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string   "name"
+    t.string   "adress"
+    t.integer  "longitude"
+    t.integer  "latitude"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "rols", force: :cascade do |t|
+    t.string   "name"
+    t.string   "brand"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "scores", force: :cascade do |t|
+    t.integer  "bites"
+    t.integer  "claps"
+    t.integer  "tags"
+    t.integer  "experiences"
+    t.integer  "camaradas"
+    t.integer  "shares"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "sponsors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "website"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
