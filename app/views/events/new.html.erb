@@ -1,0 +1,20 @@
+<h3> Crear Evento </h3>
+
+<%=form_for @event do |eve|%>
+	<%= eve.label :Titulo %></br>
+	<%= eve.text_field :title%></br>
+	<%= eve.label :Description %></br>
+	<%= eve.text_field :description%></br>
+	<%= eve.label :Fecha_de_apertura%>
+	<%= eve.text_field :datestart%></br>
+	<%= eve.label :Fecha_de_cierre%>
+	<%= eve.text_field :dateend%></br>
+	<%= eve.label :Hora_inicio%>
+	<%= eve.text_field :hourstart%></br>
+	
+	<%= eve.label :Hora_cierre%>
+	<%= eve.text_field :hourend%></br>
+
+	
+	<%= eve.submit%>
+    <%end%>

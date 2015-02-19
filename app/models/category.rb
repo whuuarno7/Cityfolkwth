@@ -4,5 +4,5 @@ class Category < ActiveRecord::Base
 
 	#f.select :name, options_for_select([])
 
-	Category
+	
 end
