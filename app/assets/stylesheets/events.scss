@@ -4,17 +4,40 @@
 
 #background{
 	 background-color: black;
-	 
-	 height: 640px;
-	 width: 3000px;
+	 height: 1500px;
+	 width: 100%;
+	 display: block;
 }
 
-#surfbar{
-	background-color: #fff;
+#barnav{
+	background-color: white;
 	color: red;
-	height: 25px;
-	margin-top: 20px;
+	margin: 10px;
+	height: 50px;
+	text-align: center;
+		
+}
 
-	width: 1400px;
-	
+#firstview {
+	background-color: red;
+	height: 100px;
+	width:auto;
+}
+
+#secondview{
+	background-color: blue;
+	height: 100px;
+	width:auto;
+}
+
+#thirdview{
+	background-color: yellow;
+	height:100px;
+	width:auto;
+}
+
+#fourthview{
+	background-color: bronw;
+	height:100px;
+	width:auto;
 }

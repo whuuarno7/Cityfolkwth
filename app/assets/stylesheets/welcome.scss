@@ -1,0 +1,148 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+	font-family: Exo;
+	color: white;
+}
+
+#videobox { 
+	background-color: black;
+	width:  100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	
+}
+
+nav{
+	width: 100%;
+}
+
+
+video { 
+ 
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+  overflow: hidden;
+  //margin-left: -30px;
+	
+}
+#button{
+	//background-color: red;
+	width: 96%;
+	height:  auto;
+	float: right;
+	overflow: hidden;
+
+	
+
+	
+}
+
+#inv{
+	margin-left: 20px;
+	margin-top:5px;
+	color: black; 
+	font-family: 'Fredoka One', cursive;
+	float: left;
+	background-color: white;
+}
+
+#signup{
+	margin: 100px;
+	margin-top:5px;
+	color: black; 
+	font-family: 'Fredoka One', cursive;
+	float: right;
+	background-color: white;
+}
+
+#signin{
+	margin-left: 850px;
+	margin-top:5px;
+	color: black; 
+	font-family: 'Fredoka One', cursive;
+	float: right;
+	background-color: white;
+	display: inline;
+	position: absolute;
+}
+
+
+
+
+
+#inv:hover{
+	margin-left: 20px;
+	margin-top:10px;
+	font-family: 'Fredoka One', cursive;
+	float: left;
+	background-color:black;
+	color: white;
+}
+
+#signin:hover{
+	background-color:black;
+	color: white;
+}
+
+#signup:hover{
+	background-color:black;
+	color: white;
+}
+
+#prueba{
+	
+ 	background-color: black;
+ 	color: white;
+ 	width: 80%;
+ 	height: 3000px;
+ 	color: red;
+}
+
+#navbar{
+	width: 91%;
+ 	height: 40px;
+ 	background-color: white;
+ 	//position: absolute;
+ 	margin-top: 20px;
+ 	float: right;
+}
+
+#menu{
+	//background-color: #cccccc; 
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-top:20px;
+	margin-left:30px;
+}
+
+#h1 {
+	color: white;
+	position: absolute;
+
+}
+
+
+
+#navbarcollapse {
+
+
+}
+
+#back {
+
+	background-color: black;
+	height:600px;
+	z-index: -101;
+}
