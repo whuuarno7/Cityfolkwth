@@ -1,9 +1,14 @@
 source 'https://rubygems.org'
 
+gem 'momentjs-rails'
+#necesaria para el picker
+gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
+#datepicker es para el calendario tanto eventos como signup
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
+gem 'icomoon-rails'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

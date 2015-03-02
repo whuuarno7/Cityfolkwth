@@ -4,7 +4,7 @@ class Event < ActiveRecord::Base
 	validates :description, length:  {in: 15..140}
 	validates :dateend,:datestart, :hourend, :hourstart, :price, numericality: { only_integer: true }
 
-		has_one :phrases #Un evento sólo tiene una frase 
+		has_one :phrases #Un evento sólo tiene una frase
 		has_one :scores #Un evento solo tiene un score
 		has_and_belongs_to_many :users #un evento tiene muchos usuarios
 		has_and_belongs_to_many :sponsors #un evento tiene varios patrocinadores

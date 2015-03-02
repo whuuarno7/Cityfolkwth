@@ -14,5 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require moment
+//= require bootstrap-datetimepicker
+//= require moment/<locale>
+//= require tree
 
 //removi el require tree por que me presentaba problemas
