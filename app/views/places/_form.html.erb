@@ -1,0 +1,23 @@
+                  <div class="container">
+                    <div id="divnewevent">
+
+                         <%=form_for @place do |plc| %>
+                         <%= plc.label :name, "Nombre del lugar" %>
+                          <%= plc.text_field :name, class:"form-control", placeholder:"Museo nacional", autofocus: true %> </br>
+
+                          <%= plc.label :adress, "Dirección del lugar" %>
+                          <%= plc.text_field :adress, class:"form-control", placeholder:"Cr. 49 #144-86 ", autofocus: true %> </br>
+
+                          <%= plc.label :longitude, "Longitud" %>
+                          <%= plc.text_field :longitude, class:"form-control", placeholder:"longitud", autofocus: true %> </br>
+
+                          <%= plc.label :latitude, "Latitud" %>
+                          <%= plc.text_field :latitude, class:"form-control", placeholder:"latitud", autofocus: true %> </br>
+
+                          <%= plc.label :adress, "Descripción del lugar" %>
+                          <%= plc.text_field :description, class:"form-control", placeholder:"Descripción del lugar", autofocus: true %> </br>
+                           <%= plc.submit %>                                      	
+                        	
+                          <%end%>
+                    </div>
+                  </div>

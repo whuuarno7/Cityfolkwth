@@ -1,20 +1,49 @@
-<h3> Crear Evento </h3>
-<div class="jumbotron"> </div>
-<%=form_for @event do |eve|%>
-	<%= eve.label :Titulo %></br>
-	<%= eve.text_field :title%></br>
-	<%= eve.label :Description %></br>
-	<%= eve.text_field :description%></br>
-	<%= eve.label :Fecha_de_apertura%>
-	<%= eve.text_field :datestart%></br>
-	<%= eve.label :Fecha_de_cierre%>
-	<%= eve.text_field :dateend%></br>
-	<%= eve.label :Hora_inicio%>
-	<%= eve.text_field :hourstart%></br>
+<html>
+<head>
 	
-	<%= eve.label :Hora_cierre%>
-	<%= eve.text_field :hourend%></br>
+  	<title></title>
+  </head>
+  <body id="newevent">
+  	<h3> Crear Evento </h3>
+    <div  class="container-fluid">
+        <div  class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12  ">
 
-	
-	<%= eve.submit%>
-    <%end%>
+            <form>
+              <div >
+                    <div id="divnewevent" class="form-group">
+
+                        <%=form_for @event do |eve|%>
+                        	<%= eve.label :itulo, "Titulo del evento" %></br>
+                          <%= eve.text_field :title,  class:"form-control", placeholder:"Stingi Fest Back Color", autofocus: true%></br>
+                        	<%= eve.label :Description %></br>
+                        	<%= eve.text_field :description,  class:"form-control", placeholder:"No debe superar los 140 caracteres", autofocus: true%></br>
+                        	<%= eve.label :Fecha_de_apertura%>
+                         	<%= eve.text_field :datestart , class:"form-control", placeholder:"Fecha de apertura o día del evento", autofocus: true %></br>
+                        	<%= eve.label :Fecha_de_cierre%>
+                        	<%= eve.text_field :dateend,  class:"form-control", placeholder:"Fecha de cierre o día del evento", autofocus: true %></br>
+                        	<%= eve.label :Hora_inicio%>
+                        	<%= eve.text_field :hourstart,  class:"form-control", placeholder:"Hora de inicio", autofocus: true %> </br>
+                        	
+                        	<%= eve.label :Hora_cierre%>
+                        	<%= eve.text_field :hourend, class:"form-control", placeholder:"Hora de cierre", autofocus: true %></br>
+
+                          <%= eve.label :Costo%>
+                          <%= eve.text_field :price, class:"form-control", placeholder:"Costo de entrada", autofocus: true %> </br>
+
+
+                          <%= eve.label :wherebuy, "Dónde comprar"%>
+                         <%= eve.text_field :wherebuy, class:"form-control", placeholder:"Costo de entrada", autofocus: true %> </br>
+                         <%= eve.submit %>
+
+                         <%end%>
+                            
+                            </div>                  
+                   </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    
+  </body>
+</html>

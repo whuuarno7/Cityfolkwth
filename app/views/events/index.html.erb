@@ -1,7 +1,5 @@
 
-
-
-		  <div  id= "barnav" class="col-md-4">MOVIDA</div>
+	<div  id= "barnav" class="col-md-4">MOVIDA</div>
 		 </div>
 	<div class="row">
 		<div id= "firstview",class="col-xs-6  col-md-3">
@@ -33,6 +31,12 @@
 
 </div>
 
+<% @events.each do |event|%>
+
+	<%= event.name%>
+<%end%>
+
+		  
 
 
 

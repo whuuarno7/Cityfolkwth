@@ -17,6 +17,8 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require moment/<locale>
+//= require jquery-ui
 //= require tree
 
 //removi el require tree por que me presentaba problemas
+

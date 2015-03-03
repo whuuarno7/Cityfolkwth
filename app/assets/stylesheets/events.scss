@@ -2,42 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#background{
-	 background-color: black;
-	 height: 1500px;
-	 width: 100%;
-	 display: block;
-}
 
-#barnav{
-	background-color: white;
-	color: red;
-	margin: 10px;
-	height: 50px;
-	text-align: center;
-		
-}
+#newevent{
+	width: 100%;
+	height: 100%;
+	background-color: #FFCC33;
+	color: black;
+	background-size: cover;
+	margin-top: 6%;
 
-#firstview {
-	background-color: red;
-	height: 100px;
-	width:auto;
 }
-
-#secondview{
-	background-color: blue;
-	height: 100px;
-	width:auto;
-}
-
-#thirdview{
-	background-color: yellow;
-	height:100px;
-	width:auto;
-}
-
-#fourthview{
-	background-color: bronw;
-	height:100px;
-	width:auto;
+#divnewevent {
+	width:40%;
+	height:auto;
+	margin-left: 30%;
+	padding-top: 1%;
+	
 }

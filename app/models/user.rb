@@ -11,4 +11,15 @@ class User < ActiveRecord::Base
 	has_many :comments, :as => :shuots #RELACIÓN POLIMORFICA COMMENTS, gritos es la casilla que crea la relación para vincularla con comments
 
 	#CATEGORYmount_uploader :imagen, PhotoUploader
+
+	#def self.create_with_omniauth(auth)                 user_current.
+	#	self.create! do |user|
+	#		User.provider = auth['provider']
+	#		User.uid = auth['uid']
+	#		User.name = auth ['info'] ['name']
+	#		User.token = auth ['credencials'] ['token']
+	#		User.secret = auth ['credentials'] ['secret']
+	#		User.url_photo = auth['info']['image']
+	# 		
+	# end	
 end
