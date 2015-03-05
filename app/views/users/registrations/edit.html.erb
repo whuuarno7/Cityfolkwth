@@ -15,6 +15,7 @@
                     <div id="signupPage" class="form-group">
                     
                         <h2> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> <%= resource_name.to_s.humanize %> Edita tu perfil</h2>
+                        <%= image_tag @user.avatar.thumb.url %>
 
 
 
@@ -25,6 +26,17 @@
                             <%= e.label :name %> <br />
                             <%= e.text_field :name "Nombre", class:"form-control", placeholder:"Nombre", autofocus: true %>
                           </div>
+
+                          <div class= "field">
+                            <%= e.label 'Foto de perfil' %>
+                            <%= e.file_field :avatar>
+                          </div>
+
+                           <div class= "field">
+                            <%= e.label 'Foto de portada' %>
+                            <%= e.file_field :photo>
+                          </div>
+
 
                           <div class="field">
                             <%= e.label :email %><br />

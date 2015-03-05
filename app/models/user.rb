@@ -9,8 +9,10 @@ class User < ActiveRecord::Base
 	has_many :phrases, through: :score #un usuario tiene varias frases, lo cual cada una pertenece un score. 
 	has_and_belongs_to_many :events #muchos usuarios tienen varios eventos agendados
 	has_many :comments, :as => :shuots #RELACIÓN POLIMORFICA COMMENTS, gritos es la casilla que crea la relación para vincularla con comments
-
-	#CATEGORYmount_uploader :imagen, PhotoUploader
+ 
+	#for carrierwave 
+	#mount_uploader :photo, PhotoUploader
+	mount_uploader :avatar, AvatarUploader
 
 	#def self.create_with_omniauth(auth)                 user_current.
 	#	self.create! do |user|

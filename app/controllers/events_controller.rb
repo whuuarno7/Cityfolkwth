@@ -10,7 +10,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.places.new(events_params)
+    @event = Event.place.new(events_params)
     if @event.save
       redirect_to places_new_path, notice: "Evento almacenado"
     else

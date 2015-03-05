@@ -13,8 +13,8 @@
               <div >
                     <div id="divnewevent" class="form-group">
 
-                        <%=form_for @event do |eve|%>
-                        	<%= eve.label :itulo, "Titulo del evento" %></br>
+                        <%=f orm_for @events do |eve|%>
+                        	<%= eve.label  "Titulo del evento" %></br>
                           <%= eve.text_field :title,  class:"form-control", placeholder:"Stingi Fest Back Color", autofocus: true%></br>
                         	<%= eve.label :Description %></br>
                         	<%= eve.text_field :description,  class:"form-control", placeholder:"No debe superar los 140 caracteres", autofocus: true%></br>
@@ -37,7 +37,7 @@
                          <%= eve.submit %>
 
                          <%end%>
-                            
+
                             </div>                  
                    </div>
                 </form>
