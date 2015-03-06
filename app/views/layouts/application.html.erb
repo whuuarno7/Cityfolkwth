@@ -4,9 +4,57 @@
   <title>Cityfolkwtm</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:700,400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="src/jquery.skidder.css">
+	<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
+
+<nav role="navigation" class="navbar navbar-fixed-top" >
+			<div id="navbar">		
+				<div id="button"> 
+				<%if user_signed_in?%>
+					<button id="inv" type="button"  class="btn " >INVITA A TUS AMIGOS </button> 
+				 
+				 <%= link_to current_user.name,  edit_user_registration_path, class: "btn", id:"signin" %> 
+				 <% if current_user %>
+				 	<span> <%= current_user.name %></span><%= image_tag current_user.url_photo %>
+				 	<%else%>
+				 	<%= link_to 'iniciar con twitter', '/auth/twitter'%>
+				 	<%end%>
+				 							
+					<%=  link_to "Cerrar sesion" ,  destroy_user_session_path, method: :delete , class: "btn", id:"signup" %>
+				
+			 	</div>   
+			</div>
+				<img id="menu" src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/Primer+plano/menu" alt="menu"  />
+
+				<%else%>
+				 <button id="inv" type="button"  class="btn " >INVITA A TUS AMIGOS </button> 
+				 
+				 <%= link_to 'INICIA SESIÓN',  new_user_session_path, class: "btn", id:"signin" %>
+				 							
+					<%=  link_to 'REGISTRATE', new_user_registration_path, class: "btn", id:"signup" %>
+				
+			 	</div>   
+			</div>
+				<img id="menu" src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/Primer+plano/menu" alt="menu"  />
+				 
+				<%end%>			
+		</nav>
+	<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
 <%= yield %>
 

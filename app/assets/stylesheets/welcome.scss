@@ -1,0 +1,454 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+span {
+	text-decoration: none;
+}
+
+
+
+#navbar{
+	width: 91%;
+ 	height: 20%;
+ 	background-color: white;
+ 	margin-top: 0.5%;
+ 	float: right;
+ 	 
+}
+
+
+#menu{
+	width: 4%;
+	height: 4%;
+	float: left;
+	margin-top:0.4%;
+	margin-left:3%;
+}
+
+#inv{
+	margin-left: 0.5%;
+	margin-top: 0.4%;
+	color: black; 
+	font-family: 'Fredoka One', cursive;
+	float: left;
+	background-color: white;
+}
+
+
+
+ 
+
+#signup{
+	margin-right: 2%;
+	margin-top: 0.4%;
+	font-family: 'Fredoka One', cursive;
+	float: right;
+	background-color: white;
+	font-decoration: none;
+}
+
+#signin{
+	margin-right: 5%;
+	margin-top: 0.4%;
+	color: black; 
+	font-family: 'Fredoka One', cursive;
+	float: right;
+	background-color: white;
+	display: inline;
+	
+	
+}
+
+#inv:hover{
+	margin-left: 0.5%;
+	margin-top: 0.4%;
+	font-family: 'Fredoka One', cursive;
+	float: left;
+	background-color:black;
+	color: white;
+}
+
+#signin:hover{
+	background-color:black;
+	color: white;
+}
+
+#signup:hover{
+	background-color:black;
+	color: white;
+}
+
+#videobox { 
+	background-color: black;
+	width:  100%;
+	height: 100%;
+	 z-index: 1;
+
+	
+}
+video { 
+ 
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  background: url('//s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/Primer+plano/imagen+fondo+bogota.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+   position: relative;
+  //overflow: hidden;
+  //margin-left: -30px;
+	
+}
+
+
+#imagw {
+
+    height: auto;
+    width: 20%;
+    bottom: 25%;
+    margin-left: 2%;
+    position: absolute;
+    z-index: 1;
+    
+
+}
+
+	
+
+
+#w{
+	box-sizing: border-box;
+	position: relative;
+	z-index: -100;
+}
+
+
+#frame {
+	z-index: 2;
+	bottom: -20%;
+	background-color: black;
+	position: absolute;
+	opacity: 0.6;
+	margin-bottom: 15%;
+	width: 100%;
+	height: 20%
+
+}
+
+
+	
+#container-fluid {
+	padding: 0%;
+	margin: 0%;
+	overflow: hidden;
+	background-color: black;
+}
+
+#grid{
+	background-color:black;
+	width:100%;
+	height:auto;
+}
+ul.rig.columns-3 {
+	list-style: none;
+	font-size: 0px;
+	margin-left: -.5%; /* should match li left margin */
+	padding-top: 5%;
+	padding-bottom: 5%;
+	margin-left: 6%;
+
+}
+ul.rig li {
+	display: inline-block;
+	background: black;
+	vertical-align: middle;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+ul.rig li img {
+	max-width: 100%;
+	height: auto;
+	z-index:1;
+}
+
+ul.rig.columns-3 li {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+	position: relative;
+}
+ul.rig.columns-3 div {
+	position:absolute;
+	bottom:20%;
+	z-index:2;
+	display:none;
+	width:100%;
+	height:auto;
+	background-color: black;
+	opacity: 0.85;
+	font-size: 100%;
+
+	
+}
+
+ul.rig.columns-3  p {
+	font-size: 1.5rem;
+	text-align: center;
+	color: white;
+	font-family: 'Lato', ligth;
+
+}
+
+#musica:hover div{
+ display:block;
+	}
+
+#arte:hover div{
+ display:block;
+
+	}
+
+#danza:hover div { 
+ display:block;
+	
+	}
+
+
+
+#teatro:hover div{
+
+	display:block;
+	
+	}
+
+
+#cc:hover div{
+	display:block;
+	
+	}
+
+
+#arquitectura:hover div{
+	display:block;
+	
+	}
+
+.row {
+	background-color: white;
+	font-size: 100%;
+}
+
+#title{
+	float: right;
+	margin-right: 10%;
+	margin-top: 18%;
+	font-size: 3rem; 
+	color: black;
+	font-family: 'Lato', bold;
+	float: left;
+
+}
+
+#text{
+	float: right;
+	margin-top: 3%;
+	margin-right: 30%;
+	font-size: 2.5rem; 
+	color: rgba(0, 0, 0, 0.88); 
+	font-family: 'Questrial', sans-serif;
+}
+
+#text span {
+	font-size: 1.2 em;
+ 
+}
+
+
+#marimonda{
+	margin-left:5%;
+	margin-top: 10%;
+	width:100%;
+	height: auto;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+//------------------------------------aquí empieza el estilo de gamification----
+#claps {
+ 
+	margin-left: 42%;
+	font-size: 3rem;
+	font-family: 'Lato', bold;
+}
+
+#galeria {
+ 
+	margin-left: 38%;
+	font-size: 3rem;
+	font-family: 'Lato', bold;
+}
+
+#bites{
+	 
+	margin-left: 45%;
+	font-size: 3rem;
+	font-family: 'Lato', bold;
+}
+
+.description{
+	font-size: 2rem; 
+	color: black; 
+	font-family: 'Questrial', sans-serif;
+	margin-left: 5%;
+	text-align: center;
+	
+	}
+
+.circles{
+	float: right;
+	margin-right: 20%;
+	padding-top: 5%;
+	
+}
+
+#phrase{
+	width: 100%;
+	height: auto;
+	text-align: right;
+	font-family: 'Questrial', sans-serif;
+	font-size: 2rem;
+	color:  rgba(0, 0, 0, 0.88);
+
+
+}
+
+#phrase img{
+	width:100%;
+	height: auto;
+
+}
+
+#piggy{ 
+	float:left;
+	margin-left:30%;
+	display:inline-block;
+	padding-top: 15%;
+
+
+}
+
+
+
+#rr{
+	float: right;
+	margin-right: 25%;
+	display:inline-block;
+	padding-top: 15%;
+}
+
+#piggyf{
+
+	width:100%;
+	height:auto;
+	float: right;
+	display:inline-block;
+	margin-right: 10%;
+	font-family: 'Lato', sans-serif;
+	font-size: 2.5rem;
+	text-align: center;
+	margin-top: 23%;
+	
+}
+
+#rrf{
+	float: left;
+	display:inline-block;
+	margin-right: 10%;
+	font-family: 'Lato', sans-serif;
+	font-size: 2.2rem;
+	text-align:center;
+	width: 100%;
+	height: auto;
+	padding-top: 20%;
+	padding-bottom: 15%;
+}
+
+//-----------------------------qui termina gamificación------------------------------------
+//-----------------------------Aquí empieza el diseño para el efecto pantax------------------
+h2.introduccion {
+    font-size: 49px;
+    text-shadow: 0px 3px 4px rgba(0,0,0,.5);
+}
+
+.marker {
+    color: #ddd;
+    padding: 60px;
+    text-align: center;
+}
+
+.marker h2{
+
+	font-size: 4em;
+}
+.marker p{
+
+	font-size: 1.8em;
+}
+
+#bloque1 {
+    background-color: #000000;
+    margin: 0 auto;
+    width: 100%;
+    position: static;
+}
+
+#bloque2 {
+    background-color: #000000;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+}
+
+#backphoto1 {
+    background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/backphotos/backphoto1.jpg) no-repeat fixed;
+    background-size: cover;
+    background-position: center center;
+    padding: 10%;
+    min-width: 100%;
+    min-height: 50%;
+
+}
+#backphoto2 {
+    background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/backphotos/backphoto2.jpg) no-repeat fixed ;
+    background-size: cover;
+    background-position: center center;
+    padding: 10%;
+     min-width: 100%;
+    min-height: 50%;
+
+}
+
+#backphoto3 {
+    background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/backphotos/backphoto3.jpg)no-repeat fixed;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 30%;
+    min-width: 100%;
+    min-height: 50%;
+}
+#backphoto4 {
+    background: url(https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/backphotos/backphoto4.jpg)no-repeat fixed;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 30%;
+    min-width: 100%;
+    min-height: 50%;
+
+}
+
+//------------------------------Aquí termina efecto pantax-----------------------------
