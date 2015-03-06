@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217213500) do
+ActiveRecord::Schema.define(version: 20150303015323) do
 
   create_table "agendas", force: :cascade do |t|
     t.integer  "hourend"
@@ -116,6 +116,11 @@ ActiveRecord::Schema.define(version: 20150217213500) do
     t.string   "location"
     t.string   "website"
     t.integer  "borndate"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "token"
+    t.string   "secret"
+    t.string   "url_photo"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
