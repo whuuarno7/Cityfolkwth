@@ -23,14 +23,15 @@
 				<%if user_signed_in?%>
 					<button id="inv" type="button"  class="btn " >INVITA A TUS AMIGOS </button> 
 				 
-				 <%= link_to current_user.name,  edit_user_registration_path, class: "btn", id:"signin" %> 
+				 <%= link_to current_user.name,edit_user_registration_path, class: "btn", id:"signin" %> 
 				 <% if current_user %>
-				 	<span> <%= current_user.name %></span><%= image_tag current_user.url_photo %>
+				 	<span> <%= current_user.name %></span><%= image_tag current_user %><span>
+				 	<%=  link_to "Cerrar sesion" , destroy_user_session_path, method: :delete%> </span>
 				 	<%else%>
 				 	<%= link_to 'iniciar con twitter', '/auth/twitter'%>
 				 	<%end%>
-				 							
-					<%=  link_to "Cerrar sesion" ,  destroy_user_session_path, method: :delete , class: "btn", id:"signup" %>
+				 						
+					
 				
 			 	</div>   
 			</div>
