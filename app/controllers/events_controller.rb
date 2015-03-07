@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   
-
+  respond_to :html, :json, :xml
+  
   def events_params
   	params.require(:events).permit(:litle,:description, :datestart, :dateend, :hourstart, :hourend, :price, :wherebuy)
   end
