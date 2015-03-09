@@ -2,19 +2,58 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#background{
-	 background-color: black;
-	 
-	 height: 640px;
-	 width: 3000px;
+#newevent{
+	width: 100%;
+	height: 100%;
+	background-color: #FFCC33;
+	color: black;
+	background-size: cover;
+	margin-top: 6%;
+
 }
 
-#surfbar{
-	background-color: #fff;
-	color: red;
-	height: 25px;
-	margin-top: 20px;
-
-	width: 1400px;
+#divnewevent {
+	width:40%;
+	height:auto;
+	margin-left: 30%;
+	padding-top: 1%;
 	
 }
+// ------------------------Empieza Event Desing-----------------
+
+#container-fluid-event{
+	//background: url() no-repeat;
+	background: orange;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.lateral{
+	background-color: black;
+	width: 80%;
+	height: 70%;
+	opacity: 0.5%;
+}
+
+
+#lleft{
+	position: relative;
+	
+}
+
+#lcenter{
+	position: relative;
+	background-color: red;
+
+}
+
+#lrigth{
+	position: relative;
+	background-color: green;
+}
+
+
+
+
+

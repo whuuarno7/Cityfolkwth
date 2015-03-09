@@ -1,8 +1,8 @@
 class Event < ActiveRecord::Base
-	validates :title, :description, :datestart, :dateend, :hourstart, :hourend, :price, :wherebuy, presence: true
-	validates  :title, length: {in: 3..20}
-	validates :description, length:  {in: 15..140}
-	validates :dateend,:datestart, :hourend, :hourstart, :price, numericality: { only_integer: true }
+	#validates :title, :description, :datestart, :dateend, :hourstart, :hourend, :price, :wherebuy, presence: true
+	#validates :title, length: {in: 3..20}
+	#validates :description, length:  {in: 15..140}
+	#validates :dateend,:datestart, :hourend, :hourstart, :price, numericality: { only_integer: true }
 
 		has_one :phrases #Un evento sólo tiene una frase 
 		has_one :scores #Un evento solo tiene un score

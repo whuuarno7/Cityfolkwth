@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get 'places/index'
 
-  get 'events/index'
+ resources :events
+ get "events/:id" => "events#show"
 
   devise_scope :user do
     get 'users/sign_out' => "devise/sessions#destroy"
