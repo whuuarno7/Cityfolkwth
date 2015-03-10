@@ -1,4 +1,4 @@
-<<html>
+<html>
 <head>
 	<title></title>
 </head>
@@ -7,9 +7,10 @@
 
 	<div class="row">
 
-							<div  class="col-xs-6 col-sm-4 col-md-4 "> 
+							<div  class="col-xs-6 col-sm-4 col-md-4 " id="column"> 
 
 								<div id="lrigth" class="lateral">
+									<h1>lado derecho</h1>
 
 									
 
@@ -25,13 +26,13 @@
 
 
 
-					<div  class="col-xs-6 col-sm-4 col-md-4 "> 
+					<div  class="col-xs-6 col-sm-4 col-md-4 " id="column"> 
 
 						<div id="lcenter"  class="lateral">
 
 
 
-							<h1>FESTIVAL STEREO<br> PICNIC</h1>
+							<h1><%= @event.title %></h1>
 
 
 
@@ -63,138 +64,128 @@
 
 
 
-				<div  class="col-xs-6 col-sm-4 col-md-4 "> 
+				<div  class="col-xs-6 col-sm-4 col-md-4 " id="column"> 
+					
+					    <div class="row">
 
-					<div id="lleft"  class="lateral">
+					    	
+								<div  class="col-xs-3 col-sm-3 col-md-3" id="gamifications"> 
 
-						<div class="row">
+									<img src="//s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/galery-e.svg" class="btnevn">
 
-							<div  class="col-xs-3 col-sm-3 col-md-3"> 
+									<h2> GALERIA </h2>
 
-								<img src="//s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/galery-e.svg" class="btnevn">
-
-								<h2> GALERIA </h2>
-
-							</div>
-
+								</div>
 
 
-							<div  class="col-xs-3 col-sm-3 col-md-3"> 
 
-								<img src="//s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/heart-bite.svg" class="btnevn">
+								<div  class="col-xs-3 col-sm-3 col-md-3" id="gamifications"> 
 
-								<h2> BITE </h2>
+									<img src="//s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/heart-bite.svg" class="btnevn">
+
+									<h2> BITE </h2>
+
+									
+
+								</div>
+
+
+
+								<div  class="col-xs-3 col-sm-3 col-md-3" id="gamifications"> 
+
+									 <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/claps.svg" class="btnevn">
+
+									<h2> CLAPS </h2>
+
+								</div>
+
+
+
+								<div  class="col-xs-3 col-sm-3 col-md-3" id="gamifications"> 
+
+								     <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/share.svg" class="btnevn">
+
+									<h2> COMPARTIR </h2>
 
 								
+							  </div>
+							
 
-							</div>
+						
 
+								<div class="row">
 
+									<div class= "col-xs-12 col-sm-12 col-md-12" id="description">
+										
+										<%= @event.description %>
+										
 
-							<div  class="col-xs-3 col-sm-3 col-md-3"> 
-
-								 <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/claps.svg" class="btnevn">
-
-								<h2> CLAPS </h2>
-
-							</div>
-
-
-
-							<div  class="col-xs-3 col-sm-3 col-md-3"> 
-
-							     <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/share.svg" class="btnevn">
-
-								<h2> COMPARTIR </h2>
-
-							</div>
-
-
-
-						</div>
-
-						<div class="row">
-
-							<div class= "col-xs-12 col-sm-12 col-md-12">
-
-								<% @event.description %>
-
-
-
-
-
-						     <div class="row">
-
-								<div  class="col-xs-3 col-sm-3 col-md-3"> 
-
-									<img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/tagS_score.svg" class="sbtnevn">
-
-									<h2>ETIQUETAS</h2>
-
-									<h2> score </h2>
+									</div>
 
 								</div>
 
 
+								     <div class="row " id="scores"> 
+								     	
+										<div  class="col-xs-3 col-sm-3 col-md-3"> 
 
-								<div  class="col-xs-3 col-sm-3 col-md-3"> 
+											<img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/tagS_score.svg" class="sbtnevn">
 
-									<img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/bite_score.svg" class="sbtnevn">
+											<h2>ETIQUETAS</h2>
 
-									<h2>BITE</h2>
+											<h2> score </h2>
 
-									<h2> score </h2>
-
-								</div>
-
-
-
-								<div  class="col-xs-3 col-sm-3 col-md-3"> 
-
-									 <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/claps_score.svg" class="sbtnevn">
-
-									<h2>CLAPS</h2>
-
-									<h2> score </h2>
-
-								</div>
+										</div>
 
 
 
-								<div  class="col-xs-3 col-sm-3 col-md-3"> 
+										<div  class="col-xs-3 col-sm-3 col-md-3"> 
 
-								     <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/share_score.svg" class="sbtnevn">
+											<img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/bite_score.svg" class="sbtnevn">
 
-									<h2>COMPARTIDAS</h2>
+											<h2>BITE</h2>
 
-									<h2> score </h2>
+											<h2> score </h2>
 
+										</div>
+
+
+
+										<div  class="col-xs-3 col-sm-3 col-md-3"> 
+
+											 <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/claps_score.svg" class="sbtnevn">
+
+											<h2>CLAPS</h2>
+
+											<h2> score </h2>
+
+										</div>
+
+
+
+										<div  class="col-xs-3 col-sm-3 col-md-3"> 
+
+										     <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/share_score.svg" class="sbtnevn">
+
+											<h2>COMPARTIDAS</h2>
+
+											<h2> score </h2>
+
+										</div>
 								
-
+									</div>
 								</div>
 
 
 
-						    </div>
+							    
+					          
+		           </div>
+  
 
 
 
-					 </div>
-
-
-
-				</div>
-
-		  </div>
-
-
-
-
-
-	</div>
-
-
-
+	     </div>
 </div>
 
 

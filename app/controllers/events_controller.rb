@@ -20,8 +20,8 @@ class EventsController < ApplicationController
   def create
     
       @event = Event.create(events_params)
-      if @event.save
-        redirect_to new_path_event, notice: 'evento almacenado'
+    if @event.save
+        redirect_to  events_path, notice: 'evento almacenado'
       else
         render 'events#index'
     end
@@ -29,6 +29,6 @@ class EventsController < ApplicationController
 
   private
   def events_params
-    params.require(:events).permit(:title,:description, :datestart, :dateend, :hourstart, :hourend, :price, :wherebuy)
+    params.require(:event).permit(:title,:description, :datestart, :dateend, :hourstart, :hourend, :price, :wherebuy)
   end
 end

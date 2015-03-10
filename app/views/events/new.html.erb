@@ -9,7 +9,7 @@
         <div  class="row">
           <div class="col-xs-12 col-sm-12 col-md-12  ">
 
-            <form>
+           
               <div >
                     <div id="divnewevent" class="form-group">
 
@@ -19,6 +19,8 @@
                         	<%= eve.label :description, "Descripción" %></br>
                         	<%= eve.text_field :description,  class:"form-control", placeholder:"No debe superar los 140 caracteres", autofocus: true%></br>
                         	
+                          <%= eve.label :event, "Lugar"%>
+                          <%= eve.collection_select :place_id,Place.all,:id,:name %>
                           <%= eve.label :datestart, "Fecha_de_apertura" %>
                          	<%= eve.text_field :datestart, class:"form-control", placeholder:"Fecha de apertura o día del evento", autofocus: true %></br>
 

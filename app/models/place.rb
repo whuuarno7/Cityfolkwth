@@ -10,6 +10,6 @@ class Place < ActiveRecord::Base
 		has_one :scores  #Un lugar puede tener un solo score
 		has_and_belongs_to_many :categorys #un lugar puede tener varias categorias
 
-	mount_uploader :imagen, FotoUploader
+	#mount_uploader :imagen, FotoUploader
   
 end
