@@ -42,20 +42,91 @@
 
 }
 
-#game{
-
-	background-color: red;
+.rigth{
+	position: absolute;
+	background-color: black;
+	margin-right: 5%;
 }
+
+//---------------------------- Empieza columna central----------------------
+
+#lcenter{
+	position: relative;
+	margin-right: 5%;
+}
+
+#titulo{
+	color: white;
+	font-size: 2.5rem;
+	text-align: center;
+	padding-top: 5%;
+	width: 80%;
+	margin-left: 10%;
+	font-family: 'Lato', b;
+
+}
+#imgprofile {
+	width: 175px;
+	height: 175px;
+	border-radius: 50%;
+	background-position: center center;
+	background-color: #FFF;
+	margin-left: 20%;
+}
+
+#date{
+	font-size: 1.6rem;
+	text-align: center;
+	color: white;
+	font-family: 'Lato', ligth;
+}
+
+#hour{
+	font-size: 1rem;
+	text-align: center;
+	color: white;
+	font-family: 'Lato', ligth;
+}
+
+#infoevent{
+	font-size: 1.2rem;
+	text-align: center;
+	color: white;
+	font-family: 'Lato', ligth;
+}
+
+
+
+
+//------------------------------- Fin de columna central----------------------
+
+//----------------------------------Empieza la columna derecha----------------
+
+#rigthbottom{
+	padding-top: 85%;
+	z-index: 1;
+}
+
+#rigthcenter{
+	padding-top: 40%;
+	z-index: 2;
+	color: white;
+	text-align: center;
+	font-size: 1.5rem;
+	vertical-align: center;
+
+}
+
+#rigthtop{
+	padding-top: 5%;
+	z-index: 3;
+}
+
+
 
 #lleft{
 	position: relative;
 	
-}
-
-#lcenter{
-	position: relative;
-	
-
 }
 
 #gamifications img{
@@ -66,17 +137,17 @@
 }
 #gamifications h2 {
 	font-size: 1rem;
-	margin:  0 auto;
 	font-family: 'Lato', ligth;
 	color: white;
-	display: inline-block;
+	text-align: center;
+    margin-top: -10%;
+
 }
 
-#gamifications{
-	background-color: black;
-}
+
 
 #lrigth{
+	
 	position: relative;
 	
 }
@@ -97,7 +168,6 @@
 	font-size: 1.5rem;
 	background-color: black;
 	width: 80%;
-	height: 100%;
 	font-family: 'Lato', ligth;
 	color: white;
 }

@@ -19,19 +19,15 @@
                         	<%= eve.label :description, "Descripción" %></br>
                         	<%= eve.text_field :description,  class:"form-control", placeholder:"No debe superar los 140 caracteres", autofocus: true%></br>
                         	
-                          <%= eve.label :event, "Lugar"%>
-                          <%= eve.collection_select :place_id,Place.all,:id,:name %>
-                          <%= eve.label :datestart, "Fecha_de_apertura" %>
-                         	<%= eve.text_field :datestart, class:"form-control", placeholder:"Fecha de apertura o día del evento", autofocus: true %></br>
+                          
+                          <%= eve.label :datestart, "Fecha de apertura" %></br>
+                         	<%= eve.text_field :datestart, class:"form-control", placeholder:"Fecha de apertura o día del evento: Mar,20-Feb-15 - Mie,21-Feb-15", autofocus: true %></br>
 
-                        	<%= eve.label :dateend, "Fecha_de_cierre" %>
-                        	<%= eve.text_field :dateend,  class:"form-control", placeholder:"Fecha de cierre o día del evento", autofocus: true %></br>
-                        	<%= eve.label :hourstart, "Hora_inicio" %>
-                        	<%= eve.text_field :hourstart,  class:"form-control", placeholder:"Hora de inicio", autofocus: true %> </br>
                         	
-                        	<%= eve.label :hourend, "Hora_cierre" %>
-                        	<%= eve.text_field :hourend, class:"form-control", placeholder:"Hora de cierre", autofocus: true %></br>
-
+                        	<%= eve.label :hourstart, "Hora inicio" %></br>
+                        	<%= eve.text_field :hourstart,  class:"form-control", placeholder:"Hora de inicio: 10:00 PM - 12:00 PM", autofocus: true %> </br>
+                        	
+                        	
                           <%= eve.label :price, "Costo" %>
                           <%= eve.text_field :price, class:"form-control", placeholder:"Costo de entrada", autofocus: true %> </br>
 
