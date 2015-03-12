@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
-  get 'places/index'
+  resources :places do
+    resources :events
+  end 
 
  resources :events
  get "events/:id" => "events#show"

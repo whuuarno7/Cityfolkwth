@@ -38,22 +38,39 @@
 							<div id="imgprofile">
 							<img SRC="" >
 							</div>
+							<% if @event.datestart == @event.dateend %> 
+							<h2 id="date"> <%= @event.datestart.strftime("%B, %d de %Y" ) %> </h2>
+							
+								<%else%>
+							<h2 id="date"> <%= @event.datestart.strftime("%B, %d" ) %> hasta <%= @event.dateend.strftime("%B, %d de %Y" ) %> </h2>
 
-							<h2 id="date"><%= @event.datestart %> </h2> <br>
+								<%end%>
 
-							<h2 id="date"> <%= @event.dateend %> </h2>  <br>
 
-							<h2 id="hour"> <%= @event.hourstart %> </h2>
 
-							<h2 id="hour"> <%= @event.hourend %> </h2> <br>
+							</h2> 
+
+							<% if @event.hourstart == @event.hourend %> 
+							<h2 id="hour"> Hora: </br> <%= @event.hourstart.strftime("I:%M %p") %> </h2>
+							
+								<%else%>
+
+								<h2 id="hour"> Hora: </br> <%= @event.hourstart.strftime("%I:%M %p")   %> -
+
+							<%= @event.hourend.strftime("%I:%M %p") %> </h2> <br>
 
 							
+								<%end%>
 
-							<h1 id="infoevent"> <span class:"spanc"> <img src:""> </span> place.city </h1>
+								<% @event.places.each do |ep| %>		
+							
+							<h1 id="infoevent"> <span class:"spanc"> <img src:""> </span> <%=ep.name%></h1>
+
+							<h1 id="infoevent"> <span class:"spanc"> <img src:""> </span> <%=ep.adress%> </h1>
 
 							<h1 id="infoevent"> <span class:"spanc"> <img src:""> </span> @event.website </h1>
 
-							<h1 id="infoevent"> <span class:"spanc"> <img src:""> </span>	place.adress </h1>
+								<%end%>
 
 
 
