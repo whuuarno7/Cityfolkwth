@@ -4,9 +4,21 @@ Rails.application.routes.draw do
 
   get 'places/index'
 
-  get 'events/index'
 
-  resources :events
+  resources :places do
+    resources :events
+  end 
+
+ resources :events
+ get "events/:id" => "events#show"
+
+  devise_scope :user do
+    get 'users/sign_out' => "devise/sessions#destroy"
+end
+  devise_for :users
+
+  get "profile_user/:id" => "users_profiles#profile_user"
+
 
   devise_for :users, controllers: {registrations: "registrations"}
   # The priority is based upon order of creation: first created -> highest priority.

@@ -2,7 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+<<<<<<< HEAD
+$window = $(window);
+=======
   $window = $(window);
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474
  
         $('div[data-type="background"]').each(function() {
             var $scroll = $(this);
@@ -15,6 +19,8 @@
         });
  
 });
+<<<<<<< HEAD
+=======
 
 <script>
 $('.slideshow').each( function() {  
@@ -74,3 +80,4 @@ $('.slideshow').skidder('resize');
 });
  
 </script>
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474

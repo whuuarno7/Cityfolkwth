@@ -8,6 +8,18 @@
         <div  class="row">
           <div class="col-xs-12 col-sm-12 col-md-12  ">
 
+<<<<<<< HEAD
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <% end %>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+=======
             <form>
               <div >
                     <div id="signinPage" class="form-group">
@@ -22,6 +34,7 @@
                             
                                 <%= f.email_field  :email, class:"form-control", placeholder:"Inserte email", autofocus: true %>
                             </div>
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474
 
                             <div class="field">
                               <%= f.label :password %><br />

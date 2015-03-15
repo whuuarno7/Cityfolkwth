@@ -15,6 +15,10 @@ ActiveRecord::Schema.define(version: 20150217213500) do
 
   create_table "agendas", force: :cascade do |t|
     t.integer  "hourend"
+ActiveRecord::Schema.define(version: 20150310021100) do
+
+  create_table "agendas", force: :cascade do |t|
+    t.datetime "hourend"
     t.integer  "hourstart"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,10 +49,23 @@ ActiveRecord::Schema.define(version: 20150217213500) do
     t.integer  "dateend"
     t.integer  "hourstart"
     t.integer  "hourend"
+    t.date     "datestart"
+    t.date     "dateend"
+    t.datetime "hourstart"
+    t.datetime "hourend"
     t.integer  "price"
     t.string   "wherebuy"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "website"
+    t.string   "city"
+    t.string   "whybuy"
+    t.string   "moreinfo"
+  end
+
+  create_table "events_places", id: false, force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "place_id"
   end
 
   create_table "phrases", force: :cascade do |t|
@@ -67,6 +84,14 @@ ActiveRecord::Schema.define(version: 20150217213500) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "city"
+    t.string   "website"
+    t.string   "openhour"
+  end
+
+  create_table "places_categories", id: false, force: :cascade do |t|
+    t.integer "place_id"
+    t.integer "categories_id"
   end
 
   create_table "rols", force: :cascade do |t|

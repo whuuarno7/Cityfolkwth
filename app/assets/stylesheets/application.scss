@@ -13,11 +13,18 @@
  *= require_self
  */
 
+<<<<<<< HEAD:app/assets/stylesheets/application.scss
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+=======
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "icons";
 @import "bootstrap";
 @import "bootstrap-datetimepicker";
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474:app/assets/stylesheets/application.scss
 
 .img-responsive {
     display: block;
@@ -29,4 +36,8 @@
     box-sizing: border-box;
     position: relative;
     z-index: -100;
+<<<<<<< HEAD:app/assets/stylesheets/application.scss
 }
+=======
+}
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474:app/assets/stylesheets/application.scss
