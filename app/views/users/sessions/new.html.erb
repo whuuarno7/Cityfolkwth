@@ -1,5 +1,14 @@
-<h2>Ingresa</h2>
+<html>
+<head>
+ <link href='http://fonts.googleapis.com/css?family=Lato:700,400,300' rel='stylesheet' type='text/css'>
+  <title>Inicia sesión</title>
+</head>
+<body id="bkgndsignin">
+    <div id="rowsignin" class="container-fluid">
+        <div  class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12  ">
 
+<<<<<<< HEAD
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   <% end %>
@@ -10,22 +19,50 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
+=======
+            <form>
+              <div >
+                    <div id="signinPage" class="form-group">
+                    
+                        <h2><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>INGRESA</h2>
+                        
+                        
+                            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                            <div class="field">
+                              <%= devise_error_messages! %>
+                              <%= f.label :email  %><br />
+                            
+                                <%= f.email_field  :email, class:"form-control", placeholder:"Inserte email", autofocus: true %>
+                            </div>
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+                            <div class="field">
+                              <%= f.label :password %><br />
+                              <%= f.password_field :password, class:"form-control", placeholder:"Inserte Contraseña", autocomplete: "off", autofocus: true %>
+                            </div>
+
+                            <% if devise_mapping.rememberable? -%>
+                              <div class="field">
+                                <%= f.check_box :remember_me %>
+                                <%= f.label :Recordar %>
+                              </div>
+                            <% end %>
+
+                            <div class="actions">
+                              <%= f.submit "Iniciar sesión", class:"btn btn-default" %>
+                            </div>
+                          <% end %>
+
+                    <%= render "users/shared/links" %>
+                </div>                  
+             </div>
+          </form>
+        </div>
+      </div>
   </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :Recordar %>
-    </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Enviar" %>
-  </div>
-<% end %>
+</body>
+</html>
 
-<%= render "users/shared/links" %>
+

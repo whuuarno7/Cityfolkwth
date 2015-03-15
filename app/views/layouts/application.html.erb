@@ -14,7 +14,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+		<nav role="navigation" class="navbar navbar-fixed-top" >
+			<div id="navbar">		
+				<div id="button"> 
+				<%if user_signed_in?%>
+					<button id="inv" type="button"  class="btn " >INVITA A TUS AMIGOS </button> 
+				 
+				 <%= link_to current_user.name,  edit_user_registration_path, class: "btn", id:"signin" %>
+				 							
+					<%=  link_to "Cerrar sesion" ,  destroy_user_session_path, method: :delete , class: "btn", id:"signup" %>
+				
+			 	</div>   
+			</div>
+				<img id="menu" src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/Primer+plano/menu" alt="menu"  />
 
+<<<<<<< HEAD
 
 
 <nav role="navigation" class="navbar navbar-fixed-top" >
@@ -37,6 +51,8 @@
 			</div>
 				<img id="menu" src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Dise%C3%B1os+welcome/Primer+plano/menu" alt="menu"  />
 
+=======
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474
 				<%else%>
 				 <button id="inv" type="button"  class="btn " >INVITA A TUS AMIGOS </button> 
 				 
@@ -50,6 +66,7 @@
 				 
 				<%end%>			
 		</nav>
+<<<<<<< HEAD
 	<% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
@@ -57,6 +74,9 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
+=======
+		
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474
 <%= yield %>
 
 </body>

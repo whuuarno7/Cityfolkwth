@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
   
   root 'welcome#index'
+<<<<<<< HEAD
+=======
+
+  get 'places/index'
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474
 
   get 'places/index'
 
  resources :events
  get "events/:id" => "events#show"
 
+<<<<<<< HEAD
   devise_scope :user do
     get 'users/sign_out' => "devise/sessions#destroy"
 end
@@ -15,6 +21,9 @@ end
   get "profile_user/:id" => "users_profiles#profile_user"
 
 
+=======
+  devise_for :users, controllers: {registrations: "registrations"}
+>>>>>>> 036601b5e726e6f4fb26fc8a973df283f834d474
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
