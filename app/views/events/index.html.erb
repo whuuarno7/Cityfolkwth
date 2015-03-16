@@ -3,18 +3,32 @@
 	<title></title>
 </head>
 <body>
-	<ul>
-      <%= @event.each do |v|%>
-      <li>
-      <%= v.title %>
-      <%= v.description %>
-      <%= v.datestart %>
-      <%= v.dateend%>
-      <%= v.hourstart %>
-      <%= v.hourend %>
-      <%end%>
-    </ul>  
-
+	<div class="container-fluid">
+    <div class="row" id="roweve">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <% @event.each do |v|%>
+          <div class="imagen" id="events">
+             <h2><%= v.title %></h2>
+                <% if v.datestart == v.dateend %> 
+                  <h2 class="dateei"> <%= v.datestart.strftime("%B, %d de %Y" ) %> </h2>
+                   <%else%>
+                    <h2 class="dateei"> <%= v.datestart.strftime("%B, %d" ) %> hasta <%= v.dateend.strftime("%B, %d de %Y" ) %> </h2>
+                      <%end%>
+                      <% if v.hourstart == v.hourend %> 
+                    <h2 class="hourei"> Hora: </br> <%= v.hourstart.strftime("I:%M %p") %> </h2>
+                    <%else%>
+                    <h2 class="hourei"> Hora: </br> <%= v.hourstart.strftime("%I:%M %p")   %> -
+                      <%= v.hourend.strftime("%I:%M %p") %> 
+                    </h2>
+                  <br>
+                <%end%>
+          </div>       
+         <%end%>
+        </div>
+      
+     </div>
+    </div>  
+   </div> 
 </body>
 </html>
 

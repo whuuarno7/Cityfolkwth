@@ -10,5 +10,9 @@ class User < ActiveRecord::Base
 	has_and_belongs_to_many :events #muchos usuarios tienen varios eventos agendados
 	has_many :comments, :as => :shuots #RELACIÓN POLIMORFICA COMMENTS, gritos es la casilla que crea la relación para vincularla con comments
 
-	# mount_uploader :imagen, PhotoUploader
+	 has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+      has_attached_file :background, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+      validates_attachment_content_type :background, :content_type => /\Aimage\/.*\Z/
 end

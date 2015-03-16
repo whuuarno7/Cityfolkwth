@@ -4,4 +4,5 @@ class Users::RegistrationsController < Devise::RegistrationsController
 	@users =  User.all
 	end 	 
     
+   
 end

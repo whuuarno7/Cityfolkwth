@@ -48,6 +48,12 @@
                           <%= eve.text_field :whybuy, class:"form-control", placeholder:"Plus de insentivo", autofocus: true %></br>
                           <%= eve.label :moreinfo, "más info" %></br>
                           <%= eve.text_field :whybuy, class:"form-control", placeholder:"Mayor información", autofocus: true %></br>
+                          <%= eve.label :avatar, "Foto de perfil" %>
+                           <%= eve.file_field :avatar %>
+                           <%= eve.label :background, "Foto de fondo" %>
+                           <%= eve.file_field :background %>
+
+
 
                           <%= eve.submit %>
                          <%end%>

@@ -4,7 +4,7 @@
   	<title></title>
   </head>
   <body id="newevent">
-  	<h3> Crear Evento </h3>
+  	<h3> Crear Lugar </h3>
     <div  class="container-fluid">
         <div  class="row">
           <div class="col-xs-12 col-sm-12 col-md-12  ">
@@ -14,24 +14,24 @@
                     <div id="divnewevent" class="form-group">
 
                         <%=form_for @place do |place|%>
-                        	<%= place.label :name, "Titulo del placento" %></br>
-                          <%= place.text_field :name,  class:"form-control", placeholder:"Stingi Fest Back Color", autofocus: true%></br>
-                        	<%= place.label :adress, "Descripción" %></br>
-                        	<%= place.text_field :adress,  class:"form-control", placeholder:"No debe superar los 140 caracteres", autofocus: true%></br>
+                        	<%= place.label :name, "Nombre del lugar" %></br>
+                          <%= place.text_field :name,  class:"form-control", placeholder:"Museo Nacional", autofocus: true%></br>
+                        	<%= place.label :adress, "Dirección" %></br>
+                        	<%= place.text_field :adress,  class:"form-control", placeholder:"Kr, Cll, Av, Tv, bis", autofocus: true%></br>
                           
-                          <%= place.label :longitude, "Fecha de apertura" %></br>
-                         	<%= place.text_field :longitude, class:"form-control", placeholder:"Fecha de apertura o día del placento", autofocus: true %></br>
+                          <%= place.label :longitude, "longitude" %></br>
+                         	<%= place.text_field :longitude, class:"form-control", placeholder:"formato de longitud", autofocus: true %></br>
 
-                        	<%= place.label :latitude, "Fecha de cierre" %></br>
-                        	<%= place.text_field :latitude,  class:"form-control", placeholder:"Fecha de cierre o día del placento", autofocus: true %></br>
-                        	<%= place.label :city, "Hora inicio" %></br>
-                        	<%= place.text_field :city,  class:"form-control", placeholder:"Hora de inicio", autofocus: true %> </br>
+                        	<%= place.label :latitude, "latitude" %></br>
+                        	<%= place.text_field :latitude,  class:"form-control", placeholder:"formato longitud", autofocus: true %></br>
+                        	<%= place.label :city, "ciudad" %></br>
+                        	<%= place.text_field :city,  class:"form-control", placeholder:"Medellin,CO", autofocus: true %> </br>
                         	
-                        	<%= place.label :website, "Hora cierre" %></br>
-                        	<%= place.text_field :website, class:"form-control", placeholder:"Hora de cierre", autofocus: true %></br>
+                        	<%= place.label :website, "WebSite" %></br>
+                        	<%= place.text_field :website, class:"form-control", placeholder:"www.cosito.com", autofocus: true %></br>
 
                           <%= place.label :openhour, "openhour" %></br>
-                          <%= place.text_field :openhour, class:"form-control", placeholder:"www.cosito.com", autofocus: true  %></br>
+                          <%= place.time_select :openhour, class:"form-control", placeholder:"10:00am", autofocus: true  %></br>
                           <%= place.submit %>
                          <%end%>
 
