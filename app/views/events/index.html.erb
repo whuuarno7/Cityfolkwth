@@ -5,9 +5,10 @@
 <body>
 	<div class="container-fluid">
     <div class="row" id="roweve">
-      <div class="col-xs-12 col-sm-12 col-md-12">
-        <% @event.each do |v|%>
-          <div class="imagen" id="events">
+      <% @event.each do |v|%>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="background_imagediv" id="events" style="height: <%= [200, 220, 190, 240].sample %>px">
+             <p style="display: none;" class="backgroundei" > <%=v.background.url%> </p>
              <h2><%= v.title %></h2>
                 <% if v.datestart == v.dateend %> 
                   <h2 class="dateei"> <%= v.datestart.strftime("%B, %d de %Y" ) %> </h2>
@@ -22,14 +23,19 @@
                     </h2>
                   <br>
                 <%end%>
-          </div>       
+             </div>  
+           </div>     
          <%end%>
+        
+        
+        <div class="col-xs-12 col-sm-6 col-md-4">
         </div>
-      
-     </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+        </div>
+     
     </div>  
    </div> 
 </body>
 </html>
 
-
+<%= javascript_include_tag "Background"%>

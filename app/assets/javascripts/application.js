@@ -15,5 +15,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-
-//removi el require tree por que me presentaba problemas
+//= require_tree 
