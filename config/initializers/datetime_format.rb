@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:db]= '%y-%m-%d %H:%M:%S'

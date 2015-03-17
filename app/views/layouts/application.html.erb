@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cityfolkwtm</title>
+  <title>Cityfolk</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Lato:700,400,300' rel='stylesheet' type='text/css'>
@@ -47,11 +47,11 @@
 				 
 				<%end%>			
 		</nav>
-	<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
+<% if notice %>
+  <p class="notice notice-alert"><%= notice %></p>
 <% end %>
 <% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
+  <p class="dangerous dangerous-alert"><%= alert %></p>
 <% end %>
 
 <%= yield %>
