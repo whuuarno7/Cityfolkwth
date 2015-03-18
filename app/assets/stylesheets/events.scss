@@ -1,3 +1,81 @@
+------------------------------index Desing--------------------
+
+#containerei {
+	width: 90%;
+	max-width: 1100px;
+	min-width: 800px;
+	margin: 50px auto;
+	position: relative;
+}
+
+#columns {
+
+	margin-top: 5%;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 15px;
+	column-fill: balance;
+}
+
+.pin {
+	display: inline-block;
+	border: 2px solid #FAFAFA;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 1;
+	width: 100%;
+	background-size: cover;
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+#barrainfo{
+	width: 100%;
+	height: auto;
+	position: absolute;
+}
+
+#pin p {
+	font: 1.5rem Arial, sans-serif;
+	color: white;
+	margin: 0;
+}
+
+
+
+@media (min-width: 960px) {
+	#columns {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+}
+
+@media (min-width: 1100px) {
+	#columns {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+	}
+}
+
+#columns:hover .pin:not(:hover) {
+	opacity: 0.9;
+}
 
 
 .background_imagediv{
@@ -23,7 +101,42 @@
 
 }
 
+.titleei{
 
+	color: #FFF;
+	text-align: center;
+	font-size: 3rem;
+	margin-top: 25%;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 4px;
+}
+
+.titleei:hover{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+
+    }
+.dateei{
+	font-size: 1.5rem;
+	color: white;
+	background-color: rgba(8, 7, 7, 0.49);
+	border-radius: 4px;
+	margin-top: 2px;
+	font-family: Lato, b;
+	text-align: center;
+}
+
+.hourei{
+
+	font-size: 1.2rem;
+	color: white;
+	background-color: rgba(8, 7, 7, 0.49);
+	border-radius: 4px;
+	margin-top: 2px;
+	font-family: Lato,b;
+}
 
 #events h1{
 

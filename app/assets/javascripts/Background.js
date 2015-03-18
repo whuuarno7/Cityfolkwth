@@ -8,7 +8,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$( ".backgroundei" ).each(function(  ) {
 		var value = $(this).text();
-     $(this).parent(".background_imagediv").css('background-image', 'url('+value+')');
+     $(this).parent(".pin").css('background-image', 'url('+value+')');
     });
 
 

@@ -1,41 +1,28 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<div class="container-fluid">
-    <div class="row" id="roweve">
-      <% @event.each do |v|%>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="background_imagediv" id="events" style="height: <%= [200, 220, 190, 240].sample %>px">
-             <p style="display: none;" class="backgroundei" > <%=v.background.url%> </p>
-             <h2><%= v.title %></h2>
-                <% if v.datestart == v.dateend %> 
-                  <h2 class="dateei"> <%= v.datestart.strftime("%B, %d de %Y" ) %> </h2>
-                   <%else%>
-                    <h2 class="dateei"> <%= v.datestart.strftime("%B, %d" ) %> hasta <%= v.dateend.strftime("%B, %d de %Y" ) %> </h2>
-                      <%end%>
-                      <% if v.hourstart == v.hourend %> 
-                    <h2 class="hourei"> Hora: </br> <%= v.hourstart.strftime("I:%M %p") %> </h2>
-                    <%else%>
-                    <h2 class="hourei"> Hora: </br> <%= v.hourstart.strftime("%I:%M %p")   %> -
-                      <%= v.hourend.strftime("%I:%M %p") %> 
-                    </h2>
-                  <br>
-                <%end%>
-             </div>  
-           </div>     
-         <%end%>
-        
-        
-        <div class="col-xs-12 col-sm-6 col-md-4">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-        </div>
-     
-    </div>  
-   </div> 
-</body>
-</html>
+
 
 <%= javascript_include_tag "Background"%>
+
+<div id="containerei">
+  <div id="columns">
+    <% @event.each do |v|%>
+      <div class="pin">
+        <p style="display: none;" class="backgroundei" > <%=v.background.url%> </p>
+             <div class="titleei"><%= v.title %></div>
+                <% if v.datestart == v.dateend %> 
+                  <div class="dateei"> <%= v.datestart.strftime("%B, %d de %Y" ) %> </div>
+                   <%else%>
+                    <div class="dateei"> <%= v.datestart.strftime("%B, %d" ) %> hasta <%= v.dateend.strftime("%B, %d de %Y" ) %> </div>
+                      <%end%>
+                      <% if v.hourstart == v.hourend %> 
+                    <div class="hourei"> Hora: </br> <%= v.hourstart.strftime("I:%M %p") %> </div>
+                    <%else%>
+                    <div class="hourei"> Hora: </br> <%= v.hourstart.strftime("%I:%M %p")   %> -
+                      <%= v.hourend.strftime("%I:%M %p") %> 
+                    </div>
+                  <br>
+              <%end%>
+           </div>
+     <%end%>
+  </div>
+</div> 
+
