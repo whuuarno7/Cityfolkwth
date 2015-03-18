@@ -22,7 +22,8 @@
 				<%if user_signed_in?%>
 					<button id="inv" type="button"  class="btn " >INVITA A TUS AMIGOS </button> 
 
-				 <%= link_to "Editar Perfil",edit_user_registration_path, class: "btn", id:"signin" %> 
+				 <%= link_to "Editar Perfil",edit_user_registration_path, class: "btn", id:"signin" %>
+				 
 				 <% if current_user %>
 				 	<span> <%= current_user.name%></span><%= image_tag current_user.avatar.url(:thumb)%><span>
 				 	<%=  link_to "Cerrar sesion", destroy_user_session_path, method: :delete, class:"btn"%> </span>
