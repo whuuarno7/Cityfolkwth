@@ -1,4 +1,6 @@
 <!-- primera columna -->
+
+
 <div class="container-fluid">
     <div id="primera">
     	<div class="media">
@@ -36,13 +38,16 @@
 
     <!--segunda -->
     <div class="container" style="margin-top: 30px" >
-        <div class="row">
+        <div class="row" id="background_row_pu">
+             <p style="display: none;" id="backgroundpu"> <% @user.background.url%> </p>
             <div class="col-md-3" style="padding-bottom: 40px;">
                 <div> 
-                    <h1 align= "center"> Perfil de Usuario </h1>
+                    <h1 align= "center"> <%= @user.name %> </h1>
 
                     <div style="margin-top: 100px; margin-bottom: 100px"> 
-               	        <p align= "center"> imagen de la persona: codigo JD </p> 
+               	        <div align= "photo_profile"> 
+                            <%= image_tag @user.background.url %>   
+                        </div> 
                     </div>
 
                     <div style="margin-top: 250px; margin-bottom: 10px">
@@ -109,3 +114,5 @@
         
     </div>   
 </div> 
+
+<%= javascript_include_tag "Background"%>

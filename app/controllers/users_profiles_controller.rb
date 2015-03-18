@@ -4,6 +4,7 @@ class UsersProfilesController < ApplicationController
 
   def profile_user 
 	@user =  User.find(params[:id])
-	end 	 
+	end 
+		 
     
 end

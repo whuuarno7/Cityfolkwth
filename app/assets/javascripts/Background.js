@@ -11,7 +11,12 @@ $(document).ready(function(){
      $(this).parent(".pin").css('background-image', 'url('+value+')');
     });
 
-
+$(document).ready(function(){
+	var value = $('#backgroundpu').text();
+	console.log(value);
+	$('#background_row_pu').css('background', 'url('+value+')');
+	
+});
 	
 });
 

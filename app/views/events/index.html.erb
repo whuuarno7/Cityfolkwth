@@ -2,7 +2,7 @@
 
 <%= javascript_include_tag "Background"%>
 
-<div id="containerei">
+<div id="containerei" style="background-color: black;">
   <div id="columns">
     <% @event.each do |v|%>
       <div class="pin">
@@ -18,11 +18,10 @@
                     <%else%>
                     <div class="hourei"> Hora: </br> <%= v.hourstart.strftime("%I:%M %p")   %> -
                       <%= v.hourend.strftime("%I:%M %p") %> 
-                    </div>
-                  <br>
-              <%end%>
-           </div>
-     <%end%>
+                    </div><br>
+                <%end%>
+             </div>
+          <%end%>
   </div>
 </div> 
 
