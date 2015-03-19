@@ -1,8 +1,20 @@
-class RegistrationsController < Devise::RegistrationsController
 
-    before_action :update_sanitized_params,
-                  if: :devise_controller?
-    def update_sanitized_params
-      devise_parameter_sanitizer.for(:sign_up) {|o| o.permit(:name, :email, :password, :password_confirmation, :borndate, :sexo)}
-    end
+class Users::RegistrationsController < Devise::RegistrationsController
+ 
+ before_action :authenticate_user!
+
+  def profile_user 
+	@user =  User.find(params[:id])
+	end 	 
+    
+end
+
+ def update_resource
+    devise_parameter_sanitizer.sanitize(:name, :sex, :tel, :bibliography, :locationborn, :website, :borndate, :avatar_file_name, :backgorund_file_name)
+  end
+   
+  def account_update_params
+    params.require(:user).permit(:name, :sex, :tel, :bibliography, :locationborn, :website, :borndate, :avatar_file_name, :backgorund_file_name)
+  end
+
 end

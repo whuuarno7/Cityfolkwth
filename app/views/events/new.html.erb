@@ -1,20 +1,66 @@
-<h3> Crear Evento </h3>
-<div class="jumbotron"> </div>
-<%=form_for @event do |eve|%>
-	<%= eve.label :Titulo %></br>
-	<%= eve.text_field :title%></br>
-	<%= eve.label :Description %></br>
-	<%= eve.text_field :description%></br>
-	<%= eve.label :Fecha_de_apertura%>
-	<%= eve.text_field :datestart%></br>
-	<%= eve.label :Fecha_de_cierre%>
-	<%= eve.text_field :dateend%></br>
-	<%= eve.label :Hora_inicio%>
-	<%= eve.text_field :hourstart%></br>
-	
-	<%= eve.label :Hora_cierre%>
-	<%= eve.text_field :hourend%></br>
 
-	
-	<%= eve.submit%>
-    <%end%>
+
+  <body id="newevent">
+  	<h3> Crear Evento </h3>
+    <div  class="container-fluid">
+        <div  class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12  ">
+
+           
+              <div >
+                    <div id="divnewevent" class="form-group">
+
+                        <%=form_for @event do |eve|%>
+                        	<%= eve.label :title, "Titulo del evento" %></br>
+                          <%= eve.text_field :title,  class:"form-control", placeholder:"Stingi Fest Back Color", autofocus: true%></br>
+                        	<%= eve.label :description, "Descripción" %></br>
+                        	<%= eve.text_field :description,  class:"form-control", placeholder:"No debe superar los 140 caracteres", autofocus: true%></br>
+                        	
+                          <%= eve.collection_select(:place_ids, Place.all, :id, :name, {prompt: true}, {multiple: true, class: "input-lg"}) %>
+                          
+                          <%= eve.label :datestart, "Fecha de apertura" %></br>
+                         	<%= eve.date_select :datestart, class:"form-control", placeholder:"Fecha de apertura o día del evento", autofocus: true %></br>
+
+                        	<%= eve.label :dateend, "Fecha de cierre" %></br>
+                        	<%= eve.date_select :dateend,  class:"form-control", placeholder:"Fecha de cierre o día del evento", autofocus: true %></br>
+                        	<%= eve.label :hourstart, "Hora inicio" %></br>
+                        	<%= eve.time_select :hourstart,  class:"form-control", placeholder:"Hora de inicio", autofocus: true %> </br>
+                        	
+                        	<%= eve.label :hourend, "Hora cierre" %></br>
+                        	<%= eve.time_select :hourend, class:"form-control", placeholder:"Hora de cierre", autofocus: true %></br>
+
+                          <%= eve.label :website, "website" %></br>
+                          <%= eve.text_field :website, class:"form-control", placeholder:"www.cosito.com", autofocus: true  %></br>
+
+                          <%= eve.label :city, "ciudad" %></br>
+                          <%= eve.text_field :city, class:"form-control", placeholder:"Ciudad,co", autofocus: true %></br>
+
+                          <%= eve.label :price, "Costo" %>
+                          <%= eve.text_field :price, class:"form-control", placeholder:"Costo de entrada", autofocus: true %> </br>
+                       
+                          <%= eve.label :wherebuy, "Dónde comprar" %>
+                          <%= eve.text_field :wherebuy, class:"form-control", placeholder:"Donde comprar", autofocus: true  %> </br>
+
+                          <%= eve.label :whybuy, "Por qué asistir o comprar" %></br>
+                          <%= eve.text_field :whybuy, class:"form-control", placeholder:"Plus de insentivo", autofocus: true %></br>
+                          <%= eve.label :moreinfo, "más info" %></br>
+                          <%= eve.text_field :whybuy, class:"form-control", placeholder:"Mayor información", autofocus: true %></br>
+                          <%= eve.label :avatar, "Foto de perfil" %>
+                           <%= eve.file_field :avatar %>
+                           <%= eve.label :background, "Foto de fondo" %>
+                           <%= eve.file_field :background %>
+
+
+
+                          <%= eve.submit %>
+                         <%end%>
+
+                            </div>                  
+                   </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    
+  </body>
+

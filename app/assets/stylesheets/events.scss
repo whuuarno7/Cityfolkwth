@@ -1,43 +1,669 @@
-// Place all the styles related to the Events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+------------------------------index Desing--------------------
 
-#background{
-	 background-color: black;
-	 height: 1500px;
-	 width: 100%;
-	 display: block;
+#containerei {
+	width: 90%;
+	max-width: 1100px;
+	min-width: 800px;
+	margin: 50px auto;
+	
 }
 
-#barnav{
-	background-color: white;
-	color: red;
-	margin: 10px;
-	height: 50px;
+#columns {
+
+	padding-top: 5%;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 15px;
+	column-fill: balance;
+	width: 98%;
+    margin-left: 1%;
+    background-color: black;
+}
+
+.pin {
+	display: inline-block;
+	border: 2px solid #FAFAFA;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 1;
+	width: 100%;
+	background-size: cover;
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+	border-radius: 8px;
+}
+
+#barrainfo{
+	width: 100%;
+	height: auto;
+	position: absolute;
+}
+
+#pin p {
+	font: 1.5rem Arial, sans-serif;
+	color: white;
+	margin: 0;
+}
+
+
+
+@media (min-width: 960px) {
+	#columns {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+}
+
+@media (min-width: 1100px) {
+	#columns {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+	}
+}
+
+#columns:hover .pin:not(:hover) {
+	opacity: 0.6;
+}
+
+
+.background_imagediv{
+
+	width: 100%;
+	background-size: cover;
+	display: inline-block;
+
+
+}
+
+
+
+#events h2{
+
+	 font-size: 1rem;
+
+	 text-align: center;
+
+	 color: white;
+
+
+
+}
+
+.titleei{
+
+	color: #FFF;
 	text-align: center;
-		
+	font-size: 3rem;
+	margin-top: 25%;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 4px;
 }
 
-#firstview {
+.titleei:hover{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+
+    }
+.dateei{
+	font-size: 1.5rem;
+	color: white;
+	background-color: rgba(8, 7, 7, 0.49);
+	border-radius: 4px;
+	margin-top: 2px;
+	font-family: Lato, b;
+	text-align: center;
+}
+
+.hourei{
+
+	font-size: 1.2rem;
+	color: white;
+	background-color: rgba(8, 7, 7, 0.49);
+	border-radius: 4px;
+	margin-top: 2px;
+	font-family: Lato,b;
+}
+
+#events h1{
+
+	 font-size: 1.5rem;
+
+	 text-align: center;
+
+	 color: white;
+
+
+
+}
+
+
+
+#roweve {
+
+	margin-top: 5%;
+
 	background-color: red;
+
+}
+
+
+
+
+
+
+
+#newevent{
+
+	width: 100%;
+
+	height: 100%;
+
+	background-color: #FFCC33;
+
+	color: black;
+
+	background-size: cover;
+
+	margin-top: 6%;
+
+
+
+}
+
+
+
+#julie{
+
+	background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+
+
+
+
+}
+
+
+
+#divnewevent {
+
+	width:40%;
+
+	height:auto;
+
+	margin-left: 30%;
+
+	padding-top: 1%;
+
+	
+
+}
+
+// ------------------------Empieza Event Desing-----------------
+
+
+
+#container-fluid-event{
+
+	background-color: orange;
+
+	background-size: cover;
+
+	width: 100%;
+
+	height: 100%;
+
+	
+
+}
+
+
+
+#column{
+
+	margin-top: 5%;
+
+	
+
+}
+
+
+
+.lateral{
+
+	background-color: rgba(0, 0, 0, 0.78);
+
+	width: 80%;
+
+	height: 70%;
+
+	opacity: 0.5%;
+
+	margin :auto;
+
+
+
+}
+
+
+
+.rigth{
+
+	position: absolute;
+
+	background-color: rgba(0, 0, 0, 0.78);
+
+	margin-right: 5%;
+
+}
+
+
+
+//---------------------------- Empieza columna central----------------------
+
+
+
+#lcenter{
+
+	position: relative;
+
+	margin-right: 5%;
+
+}
+
+
+
+#titulo{
+
+	color: white;
+
+	font-size: 2.5rem;
+
+	text-align: center;
+
+	padding-top: 5%;
+
+	width: 80%;
+
+	margin-left: 10%;
+
+	font-family: 'Lato', b;
+
+
+
+}
+
+
+
+#imgprofile {
+
+	width: 175px;
+
+	height: 175px;
+
+	border-radius: 50%;
+
+	overflow: hidden;
+
+    vertical-align: middle;
+
+    display: table-cell;
+
+    display: inherit;
+
+    margin-left: 25%;
+
+
+
+	}
+
+
+
+
+
+
+
+#photoprofile{
+
+
+
+	width: 110%;
+
+	height: 110%;
+
+	margin-left: -5%;
+
+
+
+}
+
+
+
+#date{
+
+	font-size: 1.6rem;
+
+	text-align: center;
+
+	color: white;
+
+	font-family: 'Lato', bold;
+
+}
+
+
+
+#hour{
+
+	font-size: 1.4rem;
+
+	text-align: center;
+
+	color: white;
+
+	font-family: 'Lato', ligth;
+
+}
+
+
+
+#infoevent{
+
+	font-size: 1.2rem;
+
+	text-align: center;
+
+	color: white;
+
+	font-family: 'Lato', ligth;
+
+}
+
+
+
+
+
+
+
+
+
+//------------------------------- Fin de columna central----------------------
+
+
+
+//----------------------------------Empieza la columna derecha----------------
+
+
+
+#rigthbottom{
+
+	margin-top: 1%;
+
+	z-index: 1;
+
+	background: transparent;
+
+}
+
+
+
+#rigthcenter{
+
+    padding-top: 3%;
+
+    z-index: 2;
+
+	color: white;
+
+	text-align: center;
+
+	font-size: 1.5rem;
+
+	vertical-align: center;
+
+	background-color: rgba(0, 0, 0, 0.8);
+
+	height: 250px;
+
+}
+
+
+
+#rigthtop{
+
+	padding-top: 5%;
+
+	z-index: 3;
+
+	background-color: transparent;
+
+}
+
+
+
+
+
+
+
+#lleft{
+
+	position: relative;
+
+	width: 100%;
+
+	background-color: rgba(0, 0, 0, 0);
+
+}
+
+
+
+.gamifications img{
+
+	width: 60%;
+
+	height: auto;
+
+    margin:  20%;
+
+    display: inline-block;
+
+}
+
+.gamifications h2 {
+
+	font-size: 1rem;
+
+	font-family: 'Lato', ligth;
+
+	color: white;
+
+	text-align: center;
+
+    margin-top: -10%;
+
+
+
+}
+
+
+
+.gamifications{
+
+	background-color: rgba(0, 0, 0, 0.8);
+
+
+
+}
+
+
+
+
+
+#lrigth{
+
+	
+
+	position: relative;
+
+	
+
+}
+
+
+
+
+
+
+
+#scores img{
+
+	width: 60%;
+
+	height: auto;
+
+    margin:  20%;
+
+    display: inline;
+
+
+
+   
+
+}
+
+
+
+#container-subrigth{
+
+	 background-color: transparent;
+
+	 margin-top: 1%;
+
+}
+
+
+
+#description{
+
+	text-align: center;
+
+	font-size: 1.5rem;
+
+	/*background-color: rgba(0, 0, 0, 0.78);*/
+
+	padding-top: 3%;
+
+	width: 100%;
+
+	font-family: 'Lato', ligth;
+
+	color: white;
+
+	vertical-align: middle;
+
+    
+
+}
+
+
+
+#scores h2{
+
+
+
+	font-family: 'Lato', ligth;
+
+	color: white;
+
+	text-align: center;
+
+	margin-top: -10%;
+
+	font-size: 1.2rem;
+
+
+
+}
+
+
+
+#scores{
+
+	background-color: rgba(0, 0, 0, 0.78);
+
+
+
+}
+
+
+
+#moreinfo{
+
+	background-color: rgba(0, 0, 0, 0.8);
+
+	text-align: center;
+
+	color: white;
+
+	width: 95%;
+
+	margin-left: 4%;
+
+	margin-top: 1%;
+
+}
+
+
+
+#moreinfo h1{
+
+	font-size: 2.5rem;
+
+	font-family: 'Lato', bold;
+
+
+
+}
+
+#info{
+
+	background-color: transparent;
+
+}
+
+
+
+#moreinfoinner{
+
+	width: 100%;
+
 	height: 100px;
-	width:auto;
+
 }
 
-#secondview{
-	background-color: blue;
-	height: 100px;
-	width:auto;
-}
 
-#thirdview{
-	background-color: yellow;
-	height:100px;
-	width:auto;
-}
 
-#fourthview{
-	background-color: bronw;
-	height:100px;
-	width:auto;
-}
+
+
+

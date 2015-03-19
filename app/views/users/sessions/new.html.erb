@@ -8,20 +8,18 @@
         <div  class="row">
           <div class="col-xs-12 col-sm-12 col-md-12  ">
 
-            <form>
-              <div >
-                    <div id="signinPage" class="form-group">
-                    
-                        <h2><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>INGRESA</h2>
-                        
-                        
-                            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                            <div class="field">
-                              <%= devise_error_messages! %>
-                              <%= f.label :email  %><br />
-                            
-                                <%= f.email_field  :email, class:"form-control", placeholder:"Inserte email", autofocus: true %>
-                            </div>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <% end %>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
 
                             <div class="field">
                               <%= f.label :password %><br />

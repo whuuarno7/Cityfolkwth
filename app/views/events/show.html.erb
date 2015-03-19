@@ -1,0 +1,235 @@
+<div class="container-fluid" id="continer-fluid-event">
+
+  <p style="display: none;" id="backgrounde"> <%=@event.background.url%> </p>
+
+    <div class="row" id="julie">
+
+      <div class="col-xs-12 col-sm-12 col-md-12">
+
+        <div class="row" id="info" >
+
+          <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="row" id="info">
+
+              <div  class="col-xs-6 col-sm-4 col-md-4 " id="column">
+
+                <div id="lrigth" class="lateral">
+
+                  <h1>lado derecho</h1>
+
+                </div>
+
+              </div>
+
+              <div  class="col-xs-6 col-sm-4 col-md-4 " id="column">
+
+                <div id="lcenter"  class="lateral">
+
+                  <h1 id="titulo"> <%= @event.title %></h1>
+
+                  <div>
+
+                    <div id="imgprofile"> <%=image_tag @event.avatar.url,id:"photoprofile"%>
+
+                    </div>
+
+                  </div>
+
+                  <% if @event.datestart == @event.dateend %> 
+
+                  <h2 id="date"> <%= @event.datestart.strftime("%B, %d de %Y" ) %> </h2>
+
+                  <%else%>
+
+                  <h2 id="date"> <%= @event.datestart.strftime("%B, %d" ) %> hasta <%= @event.dateend.strftime("%B, %d de %Y" ) %> </h2>
+
+                  <%end%>
+
+                  </h2> 
+
+                  <% if @event.hourstart == @event.hourend %> 
+
+                  <h2 id="hour"> Hora: </br> <%= @event.hourstart.strftime("I:%M %p") %> </h2>
+
+                  <%else%>
+
+                  <h2 id="hour"> Hora: </br> <%= @event.hourstart.strftime("%I:%M %p")   %> -
+
+                    <%= @event.hourend.strftime("%I:%M %p") %> 
+
+                  </h2>
+
+                  <br>
+
+                  <%end%>
+
+                  <% @event.places.each do |ep| %>    
+
+                  <h1 id="infoevent"> <span class:"spanc"> <img src:""> </span> <%=ep.name%></h1>
+
+                  <h1 id="infoevent"> <span class:"spanc"> <img src:""> </span> <%=ep.adress%> </h1>
+
+                  <%end%>
+
+                  <h1 id="infoevent"> <span class:"spanc"> <img src:""> </span> <%= @event.website %> </h1>
+
+                  
+
+                </div>
+
+              </div>
+
+              <div  class="col-xs-6 col-sm-4 col-md-4 " id="column">
+
+                <div class="row" id="lleft">
+
+                  <div class="col-xs-12 col-sm-12 col-md-12 ">
+
+                    <div class="row" id="rigthtop" >
+
+                        <div  class="col-xs-3 col-sm-3 col-md-3 gamifications" id="">
+
+                          <img src="//s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/galery-e.svg" class="btnevn">
+
+                          <h2> GALERIA </h2>
+
+                        </div>
+
+                        <div  class="col-xs-3 col-sm-3 col-md-3 gamifications"  id="">
+
+                          <img src="//s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/heart-bite.svg" class="btnevn">
+
+                          <h2> BITE </h2>
+
+                        </div>
+
+                        <div  class="col-xs-3 col-sm-3 col-md-3 gamifications" id="gamifications">
+
+                          <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/claps.svg" class="btnevn">
+
+                          <h2> CLAPS </h2>
+
+                        </div>
+
+                        <div  class="col-xs-3 col-sm-3 col-md-3 gamifications" id="">
+
+                          <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/share.svg" class="btnevn">
+
+                          <h2> COMPARTIR </h2>
+
+                        </div>
+
+                      
+
+                    </div>
+
+                    <div class="row" id="container-subrigth">
+
+                      <div class="col-xs-12 col-sm-12 col-md-12">
+
+                        <div class="row" id="rigthcenter">
+
+                          <div class= "col-xs-12 col-sm-12 col-md-12" >
+
+                             <div id="description"><p><%= @event.description %></p></div>
+
+                        
+
+                           </div>
+
+                          </div>
+
+                        <div class="row" id="rigthbottom">
+
+                          <div class="col-xs-12 col-sm-12 col-md-12">
+
+                            <div class="row " id="scores">
+
+                              <div  class="col-xs-3 col-sm-3 col-md-3">
+
+                                <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/tagS_score.svg" class="sbtnevn">
+
+                                <h2>ETIQUETAS</h2>
+
+                                <h2> score </h2>
+
+                              </div>
+
+                              <div  class="col-xs-3 col-sm-3 col-md-3">
+
+                                <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/bite_score.svg" class="sbtnevn">
+
+                                <h2>BITE</h2>
+
+                                <h2> score </h2>
+
+                              </div>
+
+                              <div  class="col-xs-3 col-sm-3 col-md-3">
+
+                                <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/claps_score.svg" class="sbtnevn">
+
+                                <h2>CLAPS</h2>
+
+                                <h2> score </h2>
+
+                              </div>
+
+                              <div  class="col-xs-3 col-sm-3 col-md-3">
+
+                                <img src="https://s3-sa-east-1.amazonaws.com/cityfolkwtm/Events/SVG-PAGE-EVENTS/share_score.svg" class="sbtnevn">
+
+                                <h2>COMPARTIDAS</h2>
+
+                                <h2> score </h2>
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>  
+
+                </div>  
+
+              </div>
+
+             </div> 
+
+           </div> 
+
+          </div>
+
+        <div class="row" id="moreinfo">
+
+
+
+             <div class="col-xs-12 col-sm-12 col-md-12">
+
+                  <h1> MÁS INFORMACIÓN </h1>
+
+                  
+
+             </div>
+
+        </div>
+
+        
+
+      </div>  
+
+    </div>  
+
+</div>
+
+  
+
+<%= javascript_include_tag "Background"%>

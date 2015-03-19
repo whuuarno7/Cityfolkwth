@@ -1,6 +1,43 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//---------------------------------------------------devise desing ---------------------------------
+.notice {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #ECECEC;
+	padding: 15px;
+	border: 1px solid #F3EAEA;
+	border-radius: 5px;
+	position: absolute;
+    top: 10%;
+    left: 30%;
+    text-align: center;
+
+}
+
+.notice-alert  {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #ECECEC;
+	padding: 15px;
+	border: 1px solid #F3EAEA;
+	border-radius: 5px;
+	position: absolute;
+    top: 10%;
+    left: 30%;
+    text-align: center;
+
+}
+
+
+
+//---------------------------------------------------devise desing ---------------------------------
+
+
+
 span {
 	text-decoration: none;
 }

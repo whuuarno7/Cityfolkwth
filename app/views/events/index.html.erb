@@ -1,38 +1,29 @@
 
 
 
-		  <div  id= "barnav" class="col-md-4">MOVIDA</div>
-		 </div>
-	<div class="row">
-		<div id= "firstview",class="col-xs-6  col-md-3">
 
+<%= javascript_include_tag "Background"%>
 
-		</div>
-
-		<div id= "secondview" class="col-xs-1  col-md-3">
-
-
-		</div>
-
-		<div id= "thirdview",class="col-xs-1  col-md-3">
-
-
-		</div>
-
-		<div id= "fourthview", class="col-xs-1  col-md-3">
-
-
-		</div>
-
-		<div id="fourthview", class="col-xs-1  col-md-3">
-
-
-		</div>
-
-	</div>
-
-</div>
-
-
-
+<div id="containerei" style="background-color: black;">
+  <div id="columns">
+    <% @events.each do |v|%>
+      <div class="pin">
+        <p style="display: none;" class="backgroundei" > <%=v.background.url%> </p>
+             <div class="titleei"><%= v.title %></div>
+                <% if v.datestart == v.dateend %> 
+                  <div class="dateei"> <%= v.datestart.strftime("%B, %d de %Y" ) %> </div>
+                   <%else%>
+                    <div class="dateei"> <%= v.datestart.strftime("%B, %d" ) %> hasta <%= v.dateend.strftime("%B, %d de %Y" ) %> </div>
+                      <%end%>
+                      <% if v.hourstart == v.hourend %> 
+                    <div class="hourei"> Hora: </br> <%= v.hourstart.strftime("I:%M %p") %> </div>
+                    <%else%>
+                    <div class="hourei"> Hora: </br> <%= v.hourstart.strftime("%I:%M %p")   %> -
+                      <%= v.hourend.strftime("%I:%M %p") %> 
+                    </div><br>
+                <%end%>
+             </div>
+          <%end%>
+  </div>
+</div> 
 
